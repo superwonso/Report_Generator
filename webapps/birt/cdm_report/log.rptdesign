@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.12.0.v202211281949</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="76">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://203.255.93.202:30069/cdm</property>
+            <property name="odaUser">cdm</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">cGFzc3dvcmQ=</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="77">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">recovery_result_id</property>
+                    <text-property name="displayName">recovery_result_id</text-property>
+                    <text-property name="heading">recovery_result_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">log_seq</property>
+                    <text-property name="displayName">log_seq</text-property>
+                    <text-property name="heading">log_seq</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">code</property>
+                    <text-property name="displayName">code</text-property>
+                    <text-property name="heading">code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">contents</property>
+                    <text-property name="displayName">contents</text-property>
+                    <text-property name="heading">contents</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">log_dt</property>
+                    <text-property name="displayName">log_dt</text-property>
+                    <text-property name="heading">log_dt</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">recovery_result_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">log_seq</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">contents</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">log_dt</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">recovery_result_id</property>
+                    <property name="nativeName">recovery_result_id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">log_seq</property>
+                    <property name="nativeName">log_seq</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">code</property>
+                    <property name="nativeName">code</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">contents</property>
+                    <property name="nativeName">contents</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">log_dt</property>
+                    <property name="nativeName">log_dt</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select *
+from public.cdm_disaster_recovery_result_task_log]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>recovery_result_id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>recovery_result_id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>recovery_result_id</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>log_seq</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>log_seq</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>log_seq</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>code</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>code</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>code</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>contents</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>contents</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>contents</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>log_dt</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>log_dt</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>log_dt</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="26">
+            <property name="height">0.9479166666666666in</property>
+            <column id="27"/>
+            <column id="28"/>
+            <row id="29">
+                <property name="height">0.3229166666666667in</property>
+                <cell id="30">
+                    <label id="38">
+                        <property name="fontFamily">"휴먼모음T"</property>
+                        <property name="fontSize">14pt</property>
+                        <text-property name="text">NeverStop</text-property>
+                    </label>
+                </cell>
+                <cell id="31">
+                    <label id="39">
+                        <property name="fontFamily">"휴먼모음T"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="textAlign">right</property>
+                        <text-property name="text">재해복구 결과</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="32">
+                <property name="height">0.625in</property>
+                <cell id="33">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="verticalAlign">middle</property>
+                    <label id="40">
+                        <property name="fontFamily">"휴먼모음T"</property>
+                        <property name="fontSize">30pt</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">작업내역</text-property>
+                    </label>
+                </cell>
+            </row>
+        </grid>
+        <label id="61">
+            <property name="fontFamily">"휴먼모음T"</property>
+            <property name="fontSize">14pt</property>
+            <property name="marginBottom">3pt</property>
+            <text-property name="text">□ 작업내역</text-property>
+        </label>
+        <table id="96">
+            <property name="fontSize">12pt</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">medium</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">medium</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">medium</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">medium</property>
+            <property name="width">7.947916666666667in</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">log_dt</property>
+                    <text-property name="displayName">log_dt</text-property>
+                    <expression name="expression" type="javascript">var unixTimestamp = +dataSetRow["log_dt"];&#13;
+var dateObj = new Date(unixTimestamp * 1000);&#13;
+&#13;
+ &#13;
+&#13;
+// Get the date components from the Date object&#13;
+var year = dateObj.getFullYear();&#13;
+var month = ("0" + (dateObj.getMonth() + 1)).slice(-2);&#13;
+var day = ("0" + dateObj.getDate()).slice(-2);&#13;
+var hours = ("0" + dateObj.getHours()).slice(-2);&#13;
+var minutes = ("0" + dateObj.getMinutes()).slice(-2);&#13;
+var seconds = ("0" + dateObj.getSeconds()).slice(-2);&#13;
+&#13;
+ &#13;
+&#13;
+// Combine the date components into a formatted timestamp string&#13;
+var formattedTimestamp = year + "-" + month + "-" + day + "-" + hours + "-" + minutes + "-" + seconds;&#13;
+&#13;
+ &#13;
+&#13;
+formattedTimestamp;</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">code</property>
+                    <text-property name="displayName">code</text-property>
+                    <expression name="expression" type="javascript">if(dataSetRow["code"] == "cdm-center.manager.create_cluster_tenant.success")&#13;
+	" 클러스터 테넌트가 생성되었습니다."&#13;
+if(dataSetRow["code"] == "cdm-center.manager.create_cluster_security_group.success")&#13;
+	" 클러스터 보안그룹이 생성되었습니다."&#13;
+if(dataSetRow["code"] == "cdm-center.manager.create_cluster_security_group_rule.success")&#13;
+	" 클러스터 보안그룹 규칙이 생성되었습니다."&#13;
+if(dataSetRow["code"] == "cdm-center.manager.create_cluster_network.success")&#13;
+	" 클러스터 네트워크가 생성되었습니다."&#13;
+if(dataSetRow["code"] == "cdm-center.manager.create_cluster_subnet.success")&#13;
+	" 클러스터 서브넷이 생성되었습니다."&#13;
+if(dataSetRow["code"] == "cdm-center.manager.create_cluster_router.success")&#13;
+	" 클러스터 라우터가 생성되었습니다."&#13;
+if(dataSetRow["code"] == "cdm-dr.migrator.copy_volume.failed")&#13;
+	" 실패된 task 의 볼륨 copy 결과 설정이 실패했습니다."&#13;
+if(dataSetRow["code"] == "cdm-dr.migrator.import_volume.ignored-dependency_task_failed")&#13;
+		" 무시된 task 의 볼륨 import 결과 설정이 실패했습니다."&#13;
+if(dataSetRow["code"] == "cdm-center.manager.create_cluster_instance_spec.success")&#13;
+		" 클러스터 인스턴스 스팩이 생성되었습니다."&#13;
+if(dataSetRow["code"] == "cdm-dr.migrator.create_and_diagnosis_instance.ignored-dependency_task_failed")&#13;
+	" 무시된 task 의 인스턴스 생성 및 정상 동작 여부 확인(기동) 결과 설정이 실패했습니다."&#13;
+if(dataSetRow["code"] == "cdm-dr.migrator.stop_instance.ignored-dependency_task_failed")&#13;
+	" 무시된 task 의 인스턴스 중지 결과 설정이 실패했습니다."&#13;
+if(dataSetRow["code"] == "cdm-center.manager.delete_cluster_instance_spec.success")&#13;
+	" 클러스터 인스턴스 스팩이 삭제되었습니다."&#13;
+if(dataSetRow["code"] == "cdm-center.manager.delete_cluster_router.success")&#13;
+	" 클러스터 라우터가 삭제되었습니다."&#13;
+if(dataSetRow["code"] == "cdm-center.manager.delete_cluster_network.success")&#13;
+	" 클러스터 네트워크가 삭제되었습니다."&#13;
+if(dataSetRow["code"] == "cdm-center.manager.delete_cluster_security_group.success")&#13;
+	" 클러스터 보안그룹 규칙이 삭제되었습니다"&#13;
+if(dataSetRow["code"] == "cdm-center.manager.delete_cluster_tenant.success")&#13;
+	" 클러스터 테넌트가 삭제되었습니다."</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="110">
+                <property name="width">1.7395833333333333in</property>
+            </column>
+            <column id="111">
+                <property name="width">6.208333333333333in</property>
+            </column>
+            <header>
+                <row id="97">
+                    <property name="backgroundColor">silver</property>
+                    <property name="color">silver</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">medium</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">medium</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">medium</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">medium</property>
+                    <cell id="98">
+                        <label id="71">
+                            <property name="backgroundAttachment">scroll</property>
+                            <property name="backgroundColor">silver</property>
+                            <property name="backgroundPositionX">0%</property>
+                            <property name="backgroundPositionY">0%</property>
+                            <property name="backgroundRepeat">repeat</property>
+                            <property name="fontFamily">"휴먼모음T"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="fontStyle">normal</property>
+                            <property name="fontVariant">normal</property>
+                            <property name="color">black</property>
+                            <property name="textLineThrough">none</property>
+                            <property name="textOverline">none</property>
+                            <property name="textUnderline">none</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">medium</property>
+                            <property name="marginTop">0pt</property>
+                            <property name="marginLeft">0pt</property>
+                            <property name="marginBottom">0pt</property>
+                            <property name="marginRight">0pt</property>
+                            <property name="paddingTop">1pt</property>
+                            <property name="paddingLeft">1pt</property>
+                            <property name="paddingBottom">1pt</property>
+                            <property name="paddingRight">1pt</property>
+                            <property name="textAlign">center</property>
+                            <property name="letterSpacing">normal</property>
+                            <property name="lineHeight">normal</property>
+                            <property name="orphans">2</property>
+                            <property name="textTransform">none</property>
+                            <property name="whiteSpace">normal</property>
+                            <property name="widows">2</property>
+                            <property name="wordSpacing">normal</property>
+                            <property name="display">block</property>
+                            <property name="pageBreakAfter">auto</property>
+                            <property name="pageBreakBefore">auto</property>
+                            <property name="pageBreakInside">auto</property>
+                            <property name="showIfBlank">false</property>
+                            <property name="canShrink">false</property>
+                            <property name="overflow">hidden</property>
+                            <text-property name="text">일시</text-property>
+                        </label>
+                    </cell>
+                    <cell id="100">
+                        <label id="73">
+                            <property name="backgroundAttachment">scroll</property>
+                            <property name="backgroundColor">silver</property>
+                            <property name="backgroundPositionX">0%</property>
+                            <property name="backgroundPositionY">0%</property>
+                            <property name="backgroundRepeat">repeat</property>
+                            <property name="fontFamily">"휴먼모음T"</property>
+                            <property name="fontSize">12pt</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="fontStyle">normal</property>
+                            <property name="fontVariant">normal</property>
+                            <property name="color">black</property>
+                            <property name="textLineThrough">none</property>
+                            <property name="textOverline">none</property>
+                            <property name="textUnderline">none</property>
+                            <property name="marginTop">0pt</property>
+                            <property name="marginLeft">0pt</property>
+                            <property name="marginBottom">0pt</property>
+                            <property name="marginRight">0pt</property>
+                            <property name="paddingTop">1pt</property>
+                            <property name="paddingLeft">1pt</property>
+                            <property name="paddingBottom">1pt</property>
+                            <property name="paddingRight">1pt</property>
+                            <property name="textAlign">center</property>
+                            <property name="letterSpacing">normal</property>
+                            <property name="lineHeight">normal</property>
+                            <property name="orphans">2</property>
+                            <property name="textTransform">none</property>
+                            <property name="whiteSpace">normal</property>
+                            <property name="widows">2</property>
+                            <property name="wordSpacing">normal</property>
+                            <property name="display">block</property>
+                            <property name="pageBreakAfter">auto</property>
+                            <property name="pageBreakBefore">auto</property>
+                            <property name="pageBreakInside">auto</property>
+                            <property name="showIfBlank">false</property>
+                            <property name="canShrink">false</property>
+                            <property name="overflow">hidden</property>
+                            <text-property name="text">내용</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="102">
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">medium</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">medium</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">medium</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">medium</property>
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">middle</property>
+                    <property name="height">0.3645833333333333in</property>
+                    <cell id="103">
+                        <data id="106">
+                            <property name="fontFamily">"휴먼모음T"</property>
+                            <property name="fontSize">10pt</property>
+                            <property name="borderRightStyle">solid</property>
+                            <property name="borderRightWidth">medium</property>
+                            <property name="resultSetColumn">log_dt</property>
+                        </data>
+                    </cell>
+                    <cell id="105">
+                        <data id="116">
+                            <property name="fontFamily">"휴먼모음T"</property>
+                            <property name="fontSize">10pt</property>
+                            <property name="textAlign">left</property>
+                            <property name="resultSetColumn">code</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+</report>

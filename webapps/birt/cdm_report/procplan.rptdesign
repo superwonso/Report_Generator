@@ -1,0 +1,2214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.12.0.v202211281949</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="197">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.postgresql.Driver</property>
+            <property name="odaURL">jdbc:postgresql://203.255.93.202:30069/cdm</property>
+            <property name="odaUser">cdm</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">cGFzc3dvcmQ=</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="198">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">recovery_result_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">recovery_result_id</text-property>
+                    <text-property name="heading">recovery_result_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">protection_cluster_tenant_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">protection_cluster_tenant_id</text-property>
+                    <text-property name="heading">protection_cluster_tenant_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">protection_cluster_instance_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">protection_cluster_instance_id</text-property>
+                    <text-property name="heading">protection_cluster_instance_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">protection_cluster_instance_uuid</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">protection_cluster_instance_uuid</text-property>
+                    <text-property name="heading">protection_cluster_instance_uuid</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">protection_cluster_instance_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">protection_cluster_instance_name</text-property>
+                    <text-property name="heading">protection_cluster_instance_name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">protection_cluster_instance_description</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">protection_cluster_instance_description</text-property>
+                    <text-property name="heading">protection_cluster_instance_description</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">protection_cluster_instance_spec_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">protection_cluster_instance_spec_id</text-property>
+                    <text-property name="heading">protection_cluster_instance_spec_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">protection_cluster_keypair_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">protection_cluster_keypair_id</text-property>
+                    <text-property name="heading">protection_cluster_keypair_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">protection_cluster_availability_zone_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">protection_cluster_availability_zone_id</text-property>
+                    <text-property name="heading">protection_cluster_availability_zone_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">protection_cluster_availability_zone_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">protection_cluster_availability_zone_name</text-property>
+                    <text-property name="heading">protection_cluster_availability_zone_name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">protection_cluster_hypervisor_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">protection_cluster_hypervisor_id</text-property>
+                    <text-property name="heading">protection_cluster_hypervisor_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">protection_cluster_hypervisor_type_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">protection_cluster_hypervisor_type_code</text-property>
+                    <text-property name="heading">protection_cluster_hypervisor_type_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">protection_cluster_hypervisor_hostname</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">protection_cluster_hypervisor_hostname</text-property>
+                    <text-property name="heading">protection_cluster_hypervisor_hostname</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">protection_cluster_hypervisor_ip_address</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">protection_cluster_hypervisor_ip_address</text-property>
+                    <text-property name="heading">protection_cluster_hypervisor_ip_address</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">recovery_cluster_instance_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">recovery_cluster_instance_id</text-property>
+                    <text-property name="heading">recovery_cluster_instance_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">recovery_cluster_instance_uuid</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">recovery_cluster_instance_uuid</text-property>
+                    <text-property name="heading">recovery_cluster_instance_uuid</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">recovery_cluster_instance_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">recovery_cluster_instance_name</text-property>
+                    <text-property name="heading">recovery_cluster_instance_name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">recovery_cluster_instance_description</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">recovery_cluster_instance_description</text-property>
+                    <text-property name="heading">recovery_cluster_instance_description</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">recovery_cluster_availability_zone_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">recovery_cluster_availability_zone_id</text-property>
+                    <text-property name="heading">recovery_cluster_availability_zone_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">recovery_cluster_availability_zone_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">recovery_cluster_availability_zone_name</text-property>
+                    <text-property name="heading">recovery_cluster_availability_zone_name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">recovery_cluster_hypervisor_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">recovery_cluster_hypervisor_id</text-property>
+                    <text-property name="heading">recovery_cluster_hypervisor_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">recovery_cluster_hypervisor_type_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">recovery_cluster_hypervisor_type_code</text-property>
+                    <text-property name="heading">recovery_cluster_hypervisor_type_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">recovery_cluster_hypervisor_hostname</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">recovery_cluster_hypervisor_hostname</text-property>
+                    <text-property name="heading">recovery_cluster_hypervisor_hostname</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">recovery_cluster_hypervisor_ip_address</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">recovery_cluster_hypervisor_ip_address</text-property>
+                    <text-property name="heading">recovery_cluster_hypervisor_ip_address</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">recovery_point_type_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">recovery_point_type_code</text-property>
+                    <text-property name="heading">recovery_point_type_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">recovery_point</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">recovery_point</text-property>
+                    <text-property name="heading">recovery_point</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">auto_start_flag</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">auto_start_flag</text-property>
+                    <text-property name="heading">auto_start_flag</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">diagnosis_flag</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">diagnosis_flag</text-property>
+                    <text-property name="heading">diagnosis_flag</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">diagnosis_method_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">diagnosis_method_code</text-property>
+                    <text-property name="heading">diagnosis_method_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">diagnosis_method_data</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">diagnosis_method_data</text-property>
+                    <text-property name="heading">diagnosis_method_data</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">diagnosis_timeout</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">diagnosis_timeout</text-property>
+                    <text-property name="heading">diagnosis_timeout</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">started_at</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">started_at</text-property>
+                    <text-property name="heading">started_at</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">finished_at</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">finished_at</text-property>
+                    <text-property name="heading">finished_at</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">result_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">result_code</text-property>
+                    <text-property name="heading">result_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">failed_reason_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">failed_reason_code</text-property>
+                    <text-property name="heading">failed_reason_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">failed_reason_contents</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">failed_reason_contents</text-property>
+                    <text-property name="heading">failed_reason_contents</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">recovery_result_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">protection_cluster_tenant_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">protection_cluster_instance_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">protection_cluster_instance_uuid</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">protection_cluster_instance_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">protection_cluster_instance_description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">protection_cluster_instance_spec_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">protection_cluster_keypair_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">protection_cluster_availability_zone_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">protection_cluster_availability_zone_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">protection_cluster_hypervisor_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">protection_cluster_hypervisor_type_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">protection_cluster_hypervisor_hostname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">protection_cluster_hypervisor_ip_address</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">recovery_cluster_instance_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">recovery_cluster_instance_uuid</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">recovery_cluster_instance_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">recovery_cluster_instance_description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">recovery_cluster_availability_zone_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">recovery_cluster_availability_zone_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">recovery_cluster_hypervisor_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">recovery_cluster_hypervisor_type_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">recovery_cluster_hypervisor_hostname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">24</property>
+                        <property name="name">recovery_cluster_hypervisor_ip_address</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">25</property>
+                        <property name="name">recovery_point_type_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">26</property>
+                        <property name="name">recovery_point</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">27</property>
+                        <property name="name">auto_start_flag</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">28</property>
+                        <property name="name">diagnosis_flag</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">29</property>
+                        <property name="name">diagnosis_method_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">30</property>
+                        <property name="name">diagnosis_method_data</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">31</property>
+                        <property name="name">diagnosis_timeout</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">32</property>
+                        <property name="name">started_at</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">33</property>
+                        <property name="name">finished_at</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">34</property>
+                        <property name="name">result_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">35</property>
+                        <property name="name">failed_reason_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">36</property>
+                        <property name="name">failed_reason_contents</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">recovery_result_id</property>
+                    <property name="nativeName">recovery_result_id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">protection_cluster_tenant_id</property>
+                    <property name="nativeName">protection_cluster_tenant_id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">protection_cluster_instance_id</property>
+                    <property name="nativeName">protection_cluster_instance_id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">protection_cluster_instance_uuid</property>
+                    <property name="nativeName">protection_cluster_instance_uuid</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">protection_cluster_instance_name</property>
+                    <property name="nativeName">protection_cluster_instance_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">protection_cluster_instance_description</property>
+                    <property name="nativeName">protection_cluster_instance_description</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">protection_cluster_instance_spec_id</property>
+                    <property name="nativeName">protection_cluster_instance_spec_id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">protection_cluster_keypair_id</property>
+                    <property name="nativeName">protection_cluster_keypair_id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">protection_cluster_availability_zone_id</property>
+                    <property name="nativeName">protection_cluster_availability_zone_id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">protection_cluster_availability_zone_name</property>
+                    <property name="nativeName">protection_cluster_availability_zone_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">protection_cluster_hypervisor_id</property>
+                    <property name="nativeName">protection_cluster_hypervisor_id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">protection_cluster_hypervisor_type_code</property>
+                    <property name="nativeName">protection_cluster_hypervisor_type_code</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">protection_cluster_hypervisor_hostname</property>
+                    <property name="nativeName">protection_cluster_hypervisor_hostname</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">protection_cluster_hypervisor_ip_address</property>
+                    <property name="nativeName">protection_cluster_hypervisor_ip_address</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">recovery_cluster_instance_id</property>
+                    <property name="nativeName">recovery_cluster_instance_id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">recovery_cluster_instance_uuid</property>
+                    <property name="nativeName">recovery_cluster_instance_uuid</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">recovery_cluster_instance_name</property>
+                    <property name="nativeName">recovery_cluster_instance_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">recovery_cluster_instance_description</property>
+                    <property name="nativeName">recovery_cluster_instance_description</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">recovery_cluster_availability_zone_id</property>
+                    <property name="nativeName">recovery_cluster_availability_zone_id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">recovery_cluster_availability_zone_name</property>
+                    <property name="nativeName">recovery_cluster_availability_zone_name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">recovery_cluster_hypervisor_id</property>
+                    <property name="nativeName">recovery_cluster_hypervisor_id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">recovery_cluster_hypervisor_type_code</property>
+                    <property name="nativeName">recovery_cluster_hypervisor_type_code</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">recovery_cluster_hypervisor_hostname</property>
+                    <property name="nativeName">recovery_cluster_hypervisor_hostname</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">24</property>
+                    <property name="name">recovery_cluster_hypervisor_ip_address</property>
+                    <property name="nativeName">recovery_cluster_hypervisor_ip_address</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">25</property>
+                    <property name="name">recovery_point_type_code</property>
+                    <property name="nativeName">recovery_point_type_code</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">26</property>
+                    <property name="name">recovery_point</property>
+                    <property name="nativeName">recovery_point</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">27</property>
+                    <property name="name">auto_start_flag</property>
+                    <property name="nativeName">auto_start_flag</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">-7</property>
+                </structure>
+                <structure>
+                    <property name="position">28</property>
+                    <property name="name">diagnosis_flag</property>
+                    <property name="nativeName">diagnosis_flag</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">-7</property>
+                </structure>
+                <structure>
+                    <property name="position">29</property>
+                    <property name="name">diagnosis_method_code</property>
+                    <property name="nativeName">diagnosis_method_code</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">30</property>
+                    <property name="name">diagnosis_method_data</property>
+                    <property name="nativeName">diagnosis_method_data</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">31</property>
+                    <property name="name">diagnosis_timeout</property>
+                    <property name="nativeName">diagnosis_timeout</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">32</property>
+                    <property name="name">started_at</property>
+                    <property name="nativeName">started_at</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">33</property>
+                    <property name="name">finished_at</property>
+                    <property name="nativeName">finished_at</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">34</property>
+                    <property name="name">result_code</property>
+                    <property name="nativeName">result_code</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">35</property>
+                    <property name="name">failed_reason_code</property>
+                    <property name="nativeName">failed_reason_code</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">36</property>
+                    <property name="name">failed_reason_contents</property>
+                    <property name="nativeName">failed_reason_contents</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select *
+from public.cdm_disaster_recovery_result_instance]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set2" id="224">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">recovery_result_id</property>
+                    <text-property name="displayName">recovery_result_id</text-property>
+                    <text-property name="heading">recovery_result_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">protection_cluster_tenant_id</property>
+                    <text-property name="displayName">protection_cluster_tenant_id</text-property>
+                    <text-property name="heading">protection_cluster_tenant_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">protection_cluster_instance_id</property>
+                    <text-property name="displayName">protection_cluster_instance_id</text-property>
+                    <text-property name="heading">protection_cluster_instance_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">dependency_protection_cluster_instance_id</property>
+                    <text-property name="displayName">dependency_protection_cluster_instance_id</text-property>
+                    <text-property name="heading">dependency_protection_cluster_instance_id</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">recovery_result_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">protection_cluster_tenant_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">protection_cluster_instance_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">dependency_protection_cluster_instance_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">recovery_result_id</property>
+                    <property name="nativeName">recovery_result_id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">protection_cluster_tenant_id</property>
+                    <property name="nativeName">protection_cluster_tenant_id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">protection_cluster_instance_id</property>
+                    <property name="nativeName">protection_cluster_instance_id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">dependency_protection_cluster_instance_id</property>
+                    <property name="nativeName">dependency_protection_cluster_instance_id</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">-5</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select *
+from public.cdm_disaster_recovery_result_instance_dependency]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>recovery_result_id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>recovery_result_id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>recovery_result_id</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>protection_cluster_tenant_id</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>protection_cluster_tenant_id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>protection_cluster_tenant_id</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>protection_cluster_instance_id</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>protection_cluster_instance_id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>protection_cluster_instance_id</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>dependency_protection_cluster_instance_id</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>-5</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Unknown</design:nullability>
+            <design:uiHints>
+              <design:displayName>dependency_protection_cluster_instance_id</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>dependency_protection_cluster_instance_id</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <joint-data-set name="Data Set3" id="275">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Data Set::auto_start_flag</property>
+                    <property name="alias">auto_start_flag</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set::auto_start_flag</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::protection_cluster_hypervisor_hostname</property>
+                    <property name="alias">protection_cluster_hypervisor_hostname</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::protection_cluster_hypervisor_hostname</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::finished_at</property>
+                    <property name="alias">finished_at</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set::finished_at</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::recovery_cluster_availability_zone_id</property>
+                    <property name="alias">recovery_cluster_availability_zone_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_availability_zone_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::recovery_cluster_hypervisor_hostname</property>
+                    <property name="alias">recovery_cluster_hypervisor_hostname</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_hypervisor_hostname</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::protection_cluster_instance_name</property>
+                    <property name="alias">protection_cluster_instance_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::protection_cluster_instance_name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::failed_reason_contents</property>
+                    <property name="alias">failed_reason_contents</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::failed_reason_contents</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::protection_cluster_hypervisor_type_code</property>
+                    <property name="alias">protection_cluster_hypervisor_type_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::protection_cluster_hypervisor_type_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::recovery_cluster_instance_name</property>
+                    <property name="alias">recovery_cluster_instance_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_instance_name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::failed_reason_code</property>
+                    <property name="alias">failed_reason_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::failed_reason_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::diagnosis_flag</property>
+                    <property name="alias">diagnosis_flag</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set::diagnosis_flag</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set2::recovery_result_id</property>
+                    <property name="alias">Data Set2::recovery_result_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set2::recovery_result_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::recovery_point</property>
+                    <property name="alias">recovery_point</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set::recovery_point</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::protection_cluster_tenant_id</property>
+                    <property name="alias">Data Set::protection_cluster_tenant_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set::protection_cluster_tenant_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::diagnosis_method_code</property>
+                    <property name="alias">diagnosis_method_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::diagnosis_method_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set2::protection_cluster_tenant_id</property>
+                    <property name="alias">Data Set2::protection_cluster_tenant_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set2::protection_cluster_tenant_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::protection_cluster_hypervisor_ip_address</property>
+                    <property name="alias">protection_cluster_hypervisor_ip_address</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::protection_cluster_hypervisor_ip_address</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::diagnosis_method_data</property>
+                    <property name="alias">diagnosis_method_data</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::diagnosis_method_data</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::recovery_cluster_hypervisor_type_code</property>
+                    <property name="alias">recovery_cluster_hypervisor_type_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_hypervisor_type_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::protection_cluster_availability_zone_id</property>
+                    <property name="alias">protection_cluster_availability_zone_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set::protection_cluster_availability_zone_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::recovery_cluster_instance_id</property>
+                    <property name="alias">recovery_cluster_instance_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_instance_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::recovery_cluster_hypervisor_ip_address</property>
+                    <property name="alias">recovery_cluster_hypervisor_ip_address</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_hypervisor_ip_address</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::diagnosis_timeout</property>
+                    <property name="alias">diagnosis_timeout</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set::diagnosis_timeout</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::recovery_result_id</property>
+                    <property name="alias">Data Set::recovery_result_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set::recovery_result_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set2::protection_cluster_instance_id</property>
+                    <property name="alias">Data Set2::protection_cluster_instance_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set2::protection_cluster_instance_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::recovery_cluster_instance_uuid</property>
+                    <property name="alias">recovery_cluster_instance_uuid</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_instance_uuid</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::recovery_cluster_instance_description</property>
+                    <property name="alias">recovery_cluster_instance_description</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_instance_description</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::recovery_cluster_hypervisor_id</property>
+                    <property name="alias">recovery_cluster_hypervisor_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_hypervisor_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::recovery_point_type_code</property>
+                    <property name="alias">recovery_point_type_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::recovery_point_type_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::protection_cluster_instance_id</property>
+                    <property name="alias">Data Set::protection_cluster_instance_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set::protection_cluster_instance_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::protection_cluster_availability_zone_name</property>
+                    <property name="alias">protection_cluster_availability_zone_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::protection_cluster_availability_zone_name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::started_at</property>
+                    <property name="alias">started_at</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set::started_at</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::recovery_cluster_availability_zone_name</property>
+                    <property name="alias">recovery_cluster_availability_zone_name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_availability_zone_name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::result_code</property>
+                    <property name="alias">result_code</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::result_code</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set2::dependency_protection_cluster_instance_id</property>
+                    <property name="alias">dependency_protection_cluster_instance_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set2::dependency_protection_cluster_instance_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::protection_cluster_instance_spec_id</property>
+                    <property name="alias">protection_cluster_instance_spec_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set::protection_cluster_instance_spec_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::protection_cluster_instance_description</property>
+                    <property name="alias">protection_cluster_instance_description</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::protection_cluster_instance_description</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::protection_cluster_keypair_id</property>
+                    <property name="alias">protection_cluster_keypair_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set::protection_cluster_keypair_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::protection_cluster_hypervisor_id</property>
+                    <property name="alias">protection_cluster_hypervisor_id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Data Set::protection_cluster_hypervisor_id</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Data Set::protection_cluster_instance_uuid</property>
+                    <property name="alias">protection_cluster_instance_uuid</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Data Set::protection_cluster_instance_uuid</text-property>
+                </structure>
+            </list-property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["Data Set::recovery_result_id"]</expression>
+                    <simple-property-list name="value1">
+                        <value>1</value>
+                    </simple-property-list>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Data Set::recovery_result_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Data Set::protection_cluster_tenant_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Data Set::protection_cluster_instance_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">protection_cluster_instance_uuid</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">protection_cluster_instance_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">protection_cluster_instance_description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">protection_cluster_instance_spec_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">protection_cluster_keypair_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">protection_cluster_availability_zone_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">protection_cluster_availability_zone_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">protection_cluster_hypervisor_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">protection_cluster_hypervisor_type_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">protection_cluster_hypervisor_hostname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">protection_cluster_hypervisor_ip_address</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">recovery_cluster_instance_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">recovery_cluster_instance_uuid</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">recovery_cluster_instance_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">recovery_cluster_instance_description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">recovery_cluster_availability_zone_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">recovery_cluster_availability_zone_name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">recovery_cluster_hypervisor_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">recovery_cluster_hypervisor_type_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">recovery_cluster_hypervisor_hostname</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">24</property>
+                        <property name="name">recovery_cluster_hypervisor_ip_address</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">25</property>
+                        <property name="name">recovery_point_type_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">26</property>
+                        <property name="name">recovery_point</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">27</property>
+                        <property name="name">auto_start_flag</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">28</property>
+                        <property name="name">diagnosis_flag</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">29</property>
+                        <property name="name">diagnosis_method_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">30</property>
+                        <property name="name">diagnosis_method_data</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">31</property>
+                        <property name="name">diagnosis_timeout</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">32</property>
+                        <property name="name">started_at</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">33</property>
+                        <property name="name">finished_at</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">34</property>
+                        <property name="name">result_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">35</property>
+                        <property name="name">failed_reason_code</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">36</property>
+                        <property name="name">failed_reason_contents</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">37</property>
+                        <property name="name">Data Set2::recovery_result_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">38</property>
+                        <property name="name">Data Set2::protection_cluster_tenant_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">39</property>
+                        <property name="name">Data Set2::protection_cluster_instance_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">40</property>
+                        <property name="name">dependency_protection_cluster_instance_id</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <simple-property-list name="dataSets">
+                <value>Data Set</value>
+                <value>Data Set2</value>
+            </simple-property-list>
+            <list-property name="joinConditions">
+                <structure>
+                    <property name="joinType">left-out</property>
+                    <property name="joinOperator">eq</property>
+                    <property name="leftDataSet">Data Set</property>
+                    <property name="rightDataSet">Data Set2</property>
+                    <expression name="leftExpression">dataSetRow["protection_cluster_instance_id"]</expression>
+                    <expression name="rightExpression">dataSetRow["protection_cluster_instance_id"]</expression>
+                </structure>
+            </list-property>
+        </joint-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="26">
+            <property name="height">0.9479166666666666in</property>
+            <column id="27"/>
+            <column id="28"/>
+            <row id="29">
+                <property name="height">0.3229166666666667in</property>
+                <cell id="30">
+                    <label id="38">
+                        <property name="fontFamily">"휴먼모음T"</property>
+                        <property name="fontSize">14pt</property>
+                        <text-property name="text">NeverStop</text-property>
+                    </label>
+                </cell>
+                <cell id="31">
+                    <label id="39">
+                        <property name="fontFamily">"휴먼모음T"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="textAlign">right</property>
+                        <text-property name="text">재해복구 결과</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="32">
+                <property name="height">0.625in</property>
+                <cell id="33">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="verticalAlign">middle</property>
+                    <label id="40">
+                        <property name="fontFamily">"휴먼모음T"</property>
+                        <property name="fontSize">30pt</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">기동계획</text-property>
+                    </label>
+                </cell>
+            </row>
+        </grid>
+        <label id="99"/>
+        <label id="116">
+            <property name="fontFamily">"휴먼모음T"</property>
+            <property name="fontSize">14pt</property>
+            <property name="marginBottom">3pt</property>
+            <text-property name="text">□ 기동 인스턴스</text-property>
+        </label>
+        <table id="164">
+            <property name="fontFamily">"휴먼모음T"</property>
+            <property name="fontSize">12pt</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">medium</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">medium</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">medium</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">medium</property>
+            <property name="width">100%</property>
+            <property name="dataSet">Data Set3</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Data Set::recovery_result_id</property>
+                    <text-property name="displayName">Data Set::recovery_result_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Data Set::recovery_result_id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Data Set::protection_cluster_tenant_id</property>
+                    <text-property name="displayName">Data Set::protection_cluster_tenant_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Data Set::protection_cluster_tenant_id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Data Set::protection_cluster_instance_id</property>
+                    <text-property name="displayName">Data Set::protection_cluster_instance_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Data Set::protection_cluster_instance_id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">protection_cluster_instance_uuid</property>
+                    <text-property name="displayName">Data Set::protection_cluster_instance_uuid</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["protection_cluster_instance_uuid"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">protection_cluster_instance_name</property>
+                    <text-property name="displayName">Data Set::protection_cluster_instance_name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["protection_cluster_instance_name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">protection_cluster_instance_description</property>
+                    <text-property name="displayName">Data Set::protection_cluster_instance_description</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["protection_cluster_instance_description"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">protection_cluster_instance_spec_id</property>
+                    <text-property name="displayName">Data Set::protection_cluster_instance_spec_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["protection_cluster_instance_spec_id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">protection_cluster_keypair_id</property>
+                    <text-property name="displayName">Data Set::protection_cluster_keypair_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["protection_cluster_keypair_id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">protection_cluster_availability_zone_id</property>
+                    <text-property name="displayName">Data Set::protection_cluster_availability_zone_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["protection_cluster_availability_zone_id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">protection_cluster_availability_zone_name</property>
+                    <text-property name="displayName">Data Set::protection_cluster_availability_zone_name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["protection_cluster_availability_zone_name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">protection_cluster_hypervisor_id</property>
+                    <text-property name="displayName">Data Set::protection_cluster_hypervisor_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["protection_cluster_hypervisor_id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">protection_cluster_hypervisor_type_code</property>
+                    <text-property name="displayName">Data Set::protection_cluster_hypervisor_type_code</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["protection_cluster_hypervisor_type_code"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">protection_cluster_hypervisor_hostname</property>
+                    <text-property name="displayName">Data Set::protection_cluster_hypervisor_hostname</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["protection_cluster_hypervisor_hostname"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">protection_cluster_hypervisor_ip_address</property>
+                    <text-property name="displayName">Data Set::protection_cluster_hypervisor_ip_address</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["protection_cluster_hypervisor_ip_address"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">recovery_cluster_instance_id</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_instance_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["recovery_cluster_instance_id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">recovery_cluster_instance_uuid</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_instance_uuid</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["recovery_cluster_instance_uuid"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">recovery_cluster_instance_name</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_instance_name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["recovery_cluster_instance_name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">recovery_cluster_instance_description</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_instance_description</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["recovery_cluster_instance_description"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">recovery_cluster_availability_zone_id</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_availability_zone_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["recovery_cluster_availability_zone_id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">recovery_cluster_availability_zone_name</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_availability_zone_name</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["recovery_cluster_availability_zone_name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">recovery_cluster_hypervisor_id</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_hypervisor_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["recovery_cluster_hypervisor_id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">recovery_cluster_hypervisor_type_code</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_hypervisor_type_code</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["recovery_cluster_hypervisor_type_code"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">recovery_cluster_hypervisor_hostname</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_hypervisor_hostname</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["recovery_cluster_hypervisor_hostname"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">recovery_cluster_hypervisor_ip_address</property>
+                    <text-property name="displayName">Data Set::recovery_cluster_hypervisor_ip_address</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["recovery_cluster_hypervisor_ip_address"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">recovery_point_type_code</property>
+                    <text-property name="displayName">Data Set::recovery_point_type_code</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["recovery_point_type_code"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">recovery_point</property>
+                    <text-property name="displayName">Data Set::recovery_point</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["recovery_point"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">auto_start_flag</property>
+                    <text-property name="displayName">Data Set::auto_start_flag</text-property>
+                    <expression name="expression" type="javascript">if(dataSetRow["auto_start_flag"] == 1)&#13;
+	"true" &#13;
+if (dataSetRow["auto_start_flag"] == 0)&#13;
+	"false"</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">diagnosis_flag</property>
+                    <text-property name="displayName">Data Set::diagnosis_flag</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["diagnosis_flag"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">diagnosis_method_code</property>
+                    <text-property name="displayName">Data Set::diagnosis_method_code</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["diagnosis_method_code"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">diagnosis_method_data</property>
+                    <text-property name="displayName">Data Set::diagnosis_method_data</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["diagnosis_method_data"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">diagnosis_timeout</property>
+                    <text-property name="displayName">Data Set::diagnosis_timeout</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["diagnosis_timeout"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">started_at</property>
+                    <text-property name="displayName">Data Set::started_at</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["started_at"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">finished_at</property>
+                    <text-property name="displayName">Data Set::finished_at</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["finished_at"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">result_code</property>
+                    <text-property name="displayName">Data Set::result_code</text-property>
+                    <expression name="expression" type="javascript">if(dataSetRow["result_code"] == 'dr.recovery.instance.result.success')&#13;
+	"success" &#13;
+if (dataSetRow["result_code"] == 'dr.recovery.instance.result.failed')&#13;
+	"fail"</expression>
+                    <property name="dataType">string</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">failed_reason_code</property>
+                    <text-property name="displayName">Data Set::failed_reason_code</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["failed_reason_code"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">failed_reason_contents</property>
+                    <text-property name="displayName">Data Set::failed_reason_contents</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["failed_reason_contents"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Data Set2::recovery_result_id</property>
+                    <text-property name="displayName">Data Set2::recovery_result_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Data Set2::recovery_result_id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Data Set2::protection_cluster_tenant_id</property>
+                    <text-property name="displayName">Data Set2::protection_cluster_tenant_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Data Set2::protection_cluster_tenant_id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">Data Set2::protection_cluster_instance_id</property>
+                    <text-property name="displayName">Data Set2::protection_cluster_instance_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Data Set2::protection_cluster_instance_id"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">dependency_protection_cluster_instance_id</property>
+                    <text-property name="displayName">Data Set2::dependency_protection_cluster_instance_id</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["dependency_protection_cluster_instance_id"]</expression>
+                    <property name="dataType">integer</property>
+                    <property name="allowExport">true</property>
+                </structure>
+            </list-property>
+            <column id="183">
+                <property name="width">20%</property>
+            </column>
+            <column id="184">
+                <property name="width">10%</property>
+            </column>
+            <column id="185">
+                <property name="width">35%</property>
+            </column>
+            <column id="186">
+                <property name="width">35%</property>
+            </column>
+            <header>
+                <row id="165">
+                    <property name="backgroundColor">#DBDBDB</property>
+                    <property name="verticalAlign">middle</property>
+                    <property name="height">40px</property>
+                    <cell id="166">
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <label id="187">
+                            <property name="backgroundAttachment">scroll</property>
+                            <property name="backgroundPositionX">0%</property>
+                            <property name="backgroundPositionY">0%</property>
+                            <property name="backgroundRepeat">repeat</property>
+                            <property name="fontFamily">"휴먼모음T"</property>
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="fontStyle">normal</property>
+                            <property name="fontVariant">normal</property>
+                            <property name="color">black</property>
+                            <property name="textLineThrough">none</property>
+                            <property name="textOverline">none</property>
+                            <property name="textUnderline">none</property>
+                            <property name="borderBottomColor">black</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderBottomWidth">medium</property>
+                            <property name="borderLeftColor">black</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderLeftWidth">medium</property>
+                            <property name="borderRightColor">black</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderRightWidth">medium</property>
+                            <property name="borderTopColor">black</property>
+                            <property name="borderTopStyle">none</property>
+                            <property name="borderTopWidth">medium</property>
+                            <property name="marginTop">0pt</property>
+                            <property name="marginLeft">0pt</property>
+                            <property name="marginBottom">0pt</property>
+                            <property name="marginRight">0pt</property>
+                            <property name="paddingTop">1pt</property>
+                            <property name="paddingLeft">1pt</property>
+                            <property name="paddingBottom">1pt</property>
+                            <property name="paddingRight">1pt</property>
+                            <property name="textAlign">center</property>
+                            <property name="letterSpacing">normal</property>
+                            <property name="lineHeight">normal</property>
+                            <property name="orphans">2</property>
+                            <property name="textTransform">none</property>
+                            <property name="whiteSpace">normal</property>
+                            <property name="widows">2</property>
+                            <property name="wordSpacing">normal</property>
+                            <property name="display">block</property>
+                            <property name="pageBreakAfter">auto</property>
+                            <property name="pageBreakBefore">auto</property>
+                            <property name="pageBreakInside">auto</property>
+                            <property name="showIfBlank">false</property>
+                            <property name="canShrink">false</property>
+                            <property name="overflow">hidden</property>
+                            <text-property name="text">인스턴스 이름</text-property>
+                        </label>
+                    </cell>
+                    <cell id="168">
+                        <property name="backgroundAttachment">scroll</property>
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <property name="backgroundImageType">url</property>
+                        <property name="backgroundPositionX">0%</property>
+                        <property name="backgroundPositionY">0%</property>
+                        <property name="backgroundRepeat">repeat</property>
+                        <property name="backgroundSizeHeight">auto</property>
+                        <property name="backgroundSizeWidth">auto</property>
+                        <property name="fontFamily">"휴먼모음T"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="fontWeight">normal</property>
+                        <property name="fontStyle">normal</property>
+                        <property name="fontVariant">normal</property>
+                        <property name="color">black</property>
+                        <property name="textLineThrough">none</property>
+                        <property name="textOverline">none</property>
+                        <property name="textUnderline">none</property>
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="marginLeft">0pt</property>
+                        <property name="marginBottom">0pt</property>
+                        <property name="marginRight">0pt</property>
+                        <property name="paddingTop">1pt</property>
+                        <property name="paddingLeft">1pt</property>
+                        <property name="paddingBottom">1pt</property>
+                        <property name="paddingRight">1pt</property>
+                        <property name="textAlign">center</property>
+                        <property name="textIndent">0em</property>
+                        <property name="letterSpacing">normal</property>
+                        <property name="lineHeight">normal</property>
+                        <property name="orphans">2</property>
+                        <property name="textTransform">none</property>
+                        <property name="verticalAlign">middle</property>
+                        <property name="whiteSpace">normal</property>
+                        <property name="widows">2</property>
+                        <property name="wordSpacing">normal</property>
+                        <property name="display">block</property>
+                        <property name="pageBreakAfter">auto</property>
+                        <property name="pageBreakBefore">auto</property>
+                        <property name="pageBreakInside">auto</property>
+                        <property name="showIfBlank">false</property>
+                        <property name="canShrink">false</property>
+                        <property name="overflow">hidden</property>
+                        <label id="189">
+                            <property name="backgroundAttachment">scroll</property>
+                            <property name="backgroundPositionX">0%</property>
+                            <property name="backgroundPositionY">0%</property>
+                            <property name="backgroundRepeat">repeat</property>
+                            <property name="fontFamily">"휴먼모음T"</property>
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="fontStyle">normal</property>
+                            <property name="fontVariant">normal</property>
+                            <property name="color">black</property>
+                            <property name="textLineThrough">none</property>
+                            <property name="textOverline">none</property>
+                            <property name="textUnderline">none</property>
+                            <property name="borderBottomColor">black</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderBottomWidth">medium</property>
+                            <property name="borderLeftColor">black</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderLeftWidth">medium</property>
+                            <property name="borderRightColor">black</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderRightWidth">medium</property>
+                            <property name="borderTopColor">black</property>
+                            <property name="borderTopStyle">none</property>
+                            <property name="borderTopWidth">medium</property>
+                            <property name="marginTop">0pt</property>
+                            <property name="marginLeft">0pt</property>
+                            <property name="marginBottom">0pt</property>
+                            <property name="marginRight">0pt</property>
+                            <property name="paddingTop">1pt</property>
+                            <property name="paddingLeft">1pt</property>
+                            <property name="paddingBottom">1pt</property>
+                            <property name="paddingRight">1pt</property>
+                            <property name="textAlign">center</property>
+                            <property name="letterSpacing">normal</property>
+                            <property name="lineHeight">normal</property>
+                            <property name="orphans">2</property>
+                            <property name="textTransform">none</property>
+                            <property name="whiteSpace">normal</property>
+                            <property name="widows">2</property>
+                            <property name="wordSpacing">normal</property>
+                            <property name="display">block</property>
+                            <property name="pageBreakAfter">auto</property>
+                            <property name="pageBreakBefore">auto</property>
+                            <property name="pageBreakInside">auto</property>
+                            <property name="showIfBlank">false</property>
+                            <property name="canShrink">false</property>
+                            <property name="overflow">hidden</property>
+                            <text-property name="text">상태</text-property>
+                        </label>
+                    </cell>
+                    <cell id="170">
+                        <property name="backgroundAttachment">scroll</property>
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <property name="backgroundImageType">url</property>
+                        <property name="backgroundPositionX">0%</property>
+                        <property name="backgroundPositionY">0%</property>
+                        <property name="backgroundRepeat">repeat</property>
+                        <property name="backgroundSizeHeight">auto</property>
+                        <property name="backgroundSizeWidth">auto</property>
+                        <property name="fontFamily">"휴먼모음T"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="fontWeight">normal</property>
+                        <property name="fontStyle">normal</property>
+                        <property name="fontVariant">normal</property>
+                        <property name="color">black</property>
+                        <property name="textLineThrough">none</property>
+                        <property name="textOverline">none</property>
+                        <property name="textUnderline">none</property>
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="marginLeft">0pt</property>
+                        <property name="marginBottom">0pt</property>
+                        <property name="marginRight">0pt</property>
+                        <property name="paddingTop">1pt</property>
+                        <property name="paddingLeft">1pt</property>
+                        <property name="paddingBottom">1pt</property>
+                        <property name="paddingRight">1pt</property>
+                        <property name="textAlign">center</property>
+                        <property name="textIndent">0em</property>
+                        <property name="letterSpacing">normal</property>
+                        <property name="lineHeight">normal</property>
+                        <property name="orphans">2</property>
+                        <property name="textTransform">none</property>
+                        <property name="verticalAlign">middle</property>
+                        <property name="whiteSpace">normal</property>
+                        <property name="widows">2</property>
+                        <property name="wordSpacing">normal</property>
+                        <property name="display">block</property>
+                        <property name="pageBreakAfter">auto</property>
+                        <property name="pageBreakBefore">auto</property>
+                        <property name="pageBreakInside">auto</property>
+                        <property name="showIfBlank">false</property>
+                        <property name="canShrink">false</property>
+                        <property name="overflow">hidden</property>
+                        <label id="191">
+                            <property name="backgroundAttachment">scroll</property>
+                            <property name="backgroundPositionX">0%</property>
+                            <property name="backgroundPositionY">0%</property>
+                            <property name="backgroundRepeat">repeat</property>
+                            <property name="fontFamily">"휴먼모음T"</property>
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="fontStyle">normal</property>
+                            <property name="fontVariant">normal</property>
+                            <property name="color">black</property>
+                            <property name="textLineThrough">none</property>
+                            <property name="textOverline">none</property>
+                            <property name="textUnderline">none</property>
+                            <property name="borderBottomColor">black</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderBottomWidth">medium</property>
+                            <property name="borderLeftColor">black</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderLeftWidth">medium</property>
+                            <property name="borderRightColor">black</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderRightWidth">medium</property>
+                            <property name="borderTopColor">black</property>
+                            <property name="borderTopStyle">none</property>
+                            <property name="borderTopWidth">medium</property>
+                            <property name="marginTop">0pt</property>
+                            <property name="marginLeft">0pt</property>
+                            <property name="marginBottom">0pt</property>
+                            <property name="marginRight">0pt</property>
+                            <property name="paddingTop">1pt</property>
+                            <property name="paddingLeft">1pt</property>
+                            <property name="paddingBottom">1pt</property>
+                            <property name="paddingRight">1pt</property>
+                            <property name="textAlign">center</property>
+                            <property name="letterSpacing">normal</property>
+                            <property name="lineHeight">normal</property>
+                            <property name="orphans">2</property>
+                            <property name="textTransform">none</property>
+                            <property name="whiteSpace">normal</property>
+                            <property name="widows">2</property>
+                            <property name="wordSpacing">normal</property>
+                            <property name="display">block</property>
+                            <property name="pageBreakAfter">auto</property>
+                            <property name="pageBreakBefore">auto</property>
+                            <property name="pageBreakInside">auto</property>
+                            <property name="showIfBlank">false</property>
+                            <property name="canShrink">false</property>
+                            <property name="overflow">hidden</property>
+                            <text-property name="text">이전 인스턴스</text-property>
+                        </label>
+                    </cell>
+                    <cell id="172">
+                        <property name="backgroundAttachment">scroll</property>
+                        <property name="backgroundColor">#C0C0C0</property>
+                        <property name="backgroundImageType">url</property>
+                        <property name="backgroundPositionX">0%</property>
+                        <property name="backgroundPositionY">0%</property>
+                        <property name="backgroundRepeat">repeat</property>
+                        <property name="backgroundSizeHeight">auto</property>
+                        <property name="backgroundSizeWidth">auto</property>
+                        <property name="fontFamily">"휴먼모음T"</property>
+                        <property name="fontSize">12pt</property>
+                        <property name="fontWeight">normal</property>
+                        <property name="fontStyle">normal</property>
+                        <property name="fontVariant">normal</property>
+                        <property name="color">black</property>
+                        <property name="textLineThrough">none</property>
+                        <property name="textOverline">none</property>
+                        <property name="textUnderline">none</property>
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="marginLeft">0pt</property>
+                        <property name="marginBottom">0pt</property>
+                        <property name="marginRight">0pt</property>
+                        <property name="paddingTop">1pt</property>
+                        <property name="paddingLeft">1pt</property>
+                        <property name="paddingBottom">1pt</property>
+                        <property name="paddingRight">1pt</property>
+                        <property name="textAlign">center</property>
+                        <property name="textIndent">0em</property>
+                        <property name="letterSpacing">normal</property>
+                        <property name="lineHeight">normal</property>
+                        <property name="orphans">2</property>
+                        <property name="textTransform">none</property>
+                        <property name="verticalAlign">middle</property>
+                        <property name="whiteSpace">normal</property>
+                        <property name="widows">2</property>
+                        <property name="wordSpacing">normal</property>
+                        <property name="display">block</property>
+                        <property name="pageBreakAfter">auto</property>
+                        <property name="pageBreakBefore">auto</property>
+                        <property name="pageBreakInside">auto</property>
+                        <property name="showIfBlank">false</property>
+                        <property name="canShrink">false</property>
+                        <property name="overflow">hidden</property>
+                        <label id="193">
+                            <property name="backgroundAttachment">scroll</property>
+                            <property name="backgroundPositionX">0%</property>
+                            <property name="backgroundPositionY">0%</property>
+                            <property name="backgroundRepeat">repeat</property>
+                            <property name="fontFamily">"휴먼모음T"</property>
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="fontStyle">normal</property>
+                            <property name="fontVariant">normal</property>
+                            <property name="color">black</property>
+                            <property name="textLineThrough">none</property>
+                            <property name="textOverline">none</property>
+                            <property name="textUnderline">none</property>
+                            <property name="borderBottomColor">black</property>
+                            <property name="borderBottomStyle">none</property>
+                            <property name="borderBottomWidth">medium</property>
+                            <property name="borderLeftColor">black</property>
+                            <property name="borderLeftStyle">none</property>
+                            <property name="borderLeftWidth">medium</property>
+                            <property name="borderRightColor">black</property>
+                            <property name="borderRightStyle">none</property>
+                            <property name="borderRightWidth">medium</property>
+                            <property name="borderTopColor">black</property>
+                            <property name="borderTopStyle">none</property>
+                            <property name="borderTopWidth">medium</property>
+                            <property name="marginTop">0pt</property>
+                            <property name="marginLeft">0pt</property>
+                            <property name="marginBottom">0pt</property>
+                            <property name="marginRight">0pt</property>
+                            <property name="paddingTop">1pt</property>
+                            <property name="paddingLeft">1pt</property>
+                            <property name="paddingBottom">1pt</property>
+                            <property name="paddingRight">1pt</property>
+                            <property name="textAlign">center</property>
+                            <property name="letterSpacing">normal</property>
+                            <property name="lineHeight">normal</property>
+                            <property name="orphans">2</property>
+                            <property name="textTransform">none</property>
+                            <property name="whiteSpace">normal</property>
+                            <property name="widows">2</property>
+                            <property name="wordSpacing">normal</property>
+                            <property name="display">block</property>
+                            <property name="pageBreakAfter">auto</property>
+                            <property name="pageBreakBefore">auto</property>
+                            <property name="pageBreakInside">auto</property>
+                            <property name="showIfBlank">false</property>
+                            <property name="canShrink">false</property>
+                            <property name="overflow">hidden</property>
+                            <text-property name="text">가동/비가동</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="174">
+                    <property name="height">143px</property>
+                    <cell id="175">
+                        <property name="backgroundAttachment">scroll</property>
+                        <property name="backgroundPositionX">0%</property>
+                        <property name="backgroundPositionY">0%</property>
+                        <property name="backgroundRepeat">repeat</property>
+                        <property name="fontFamily">"휴먼모음T"</property>
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">normal</property>
+                        <property name="fontStyle">normal</property>
+                        <property name="fontVariant">normal</property>
+                        <property name="color">black</property>
+                        <property name="textLineThrough">none</property>
+                        <property name="textOverline">none</property>
+                        <property name="textUnderline">none</property>
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <property name="marginTop">0pt</property>
+                        <property name="marginLeft">0pt</property>
+                        <property name="marginBottom">0pt</property>
+                        <property name="marginRight">0pt</property>
+                        <property name="paddingTop">1pt</property>
+                        <property name="paddingLeft">1pt</property>
+                        <property name="paddingBottom">1pt</property>
+                        <property name="paddingRight">1pt</property>
+                        <property name="textAlign">center</property>
+                        <property name="textIndent">0em</property>
+                        <property name="letterSpacing">normal</property>
+                        <property name="lineHeight">normal</property>
+                        <property name="orphans">2</property>
+                        <property name="textTransform">none</property>
+                        <property name="verticalAlign">middle</property>
+                        <property name="whiteSpace">normal</property>
+                        <property name="widows">2</property>
+                        <property name="wordSpacing">normal</property>
+                        <property name="display">block</property>
+                        <property name="pageBreakAfter">auto</property>
+                        <property name="pageBreakBefore">auto</property>
+                        <property name="pageBreakInside">auto</property>
+                        <property name="showIfBlank">false</property>
+                        <property name="canShrink">false</property>
+                        <property name="overflow">hidden</property>
+                        <data id="651">
+                            <property name="fontSize">10pt</property>
+                            <property name="resultSetColumn">protection_cluster_instance_name</property>
+                        </data>
+                    </cell>
+                    <cell id="177">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <property name="verticalAlign">middle</property>
+                        <list-property name="highlightRules">
+                            <structure>
+                                <property name="operator">eq</property>
+                                <property name="backgroundColor">#FFFF80</property>
+                                <expression name="testExpr" type="javascript">row["상태"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">"경고"</value>
+                                </simple-property-list>
+                            </structure>
+                            <structure>
+                                <property name="operator">eq</property>
+                                <property name="backgroundColor">#80FF80</property>
+                                <expression name="testExpr" type="javascript">row["상태"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">"성공"</value>
+                                </simple-property-list>
+                            </structure>
+                            <structure>
+                                <property name="operator">eq</property>
+                                <property name="backgroundColor">#FF0000</property>
+                                <expression name="testExpr" type="javascript">row["상태"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">"실패"</value>
+                                </simple-property-list>
+                            </structure>
+                        </list-property>
+                        <data id="648">
+                            <property name="fontSize">10pt</property>
+                            <property name="resultSetColumn">result_code</property>
+                        </data>
+                    </cell>
+                    <cell id="179">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="649">
+                            <property name="fontSize">10pt</property>
+                            <property name="resultSetColumn">dependency_protection_cluster_instance_id</property>
+                        </data>
+                    </cell>
+                    <cell id="181">
+                        <property name="borderBottomColor">#000000</property>
+                        <property name="borderBottomStyle">solid</property>
+                        <property name="borderBottomWidth">medium</property>
+                        <property name="borderLeftColor">#000000</property>
+                        <property name="borderLeftStyle">solid</property>
+                        <property name="borderLeftWidth">medium</property>
+                        <property name="borderRightColor">#000000</property>
+                        <property name="borderRightStyle">solid</property>
+                        <property name="borderRightWidth">medium</property>
+                        <property name="borderTopColor">#000000</property>
+                        <property name="borderTopStyle">solid</property>
+                        <property name="borderTopWidth">medium</property>
+                        <property name="verticalAlign">middle</property>
+                        <data id="650">
+                            <property name="fontSize">10pt</property>
+                            <property name="resultSetColumn">auto_start_flag</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+        </table>
+    </body>
+</report>
